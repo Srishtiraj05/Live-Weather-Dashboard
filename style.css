@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    color: white;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 65%;
+    max-width: 400px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #082f49;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7dd3fc;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#status {
+    margin: 20px;
+    color: #fcd34d;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 25px auto;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.current-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+#weatherIcon {
+    font-size: 65px;
+}
+
+#temperature {
+    font-size: 45px;
+}
+
+#weatherDescription {
+    color: #bae6fd;
+    margin-top: 8px;
+}
+
+#date {
+    color: #cbd5e1;
+}
+
+#forecastSection {
+    margin-top: 40px;
+}
+
+#forecastSection h2 {
+    margin-bottom: 20px;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+
+.forecast-card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.forecast-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.forecast-card p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 50px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .current-info {
+        gap: 15px;
+    }
+}
